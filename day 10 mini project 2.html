@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>content sidebar Layout</title>
+    </head>
+    <body>
+        <div class="page-layout">
+            <main>
+                <h1>Main Container</h1>
+                <p>This is the main article content area.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </main>
+            <aside>
+                <h2>Sidebar</h2>
+                <p>Links</p>
+                <ul>
+                    <li>Recent Post</li>
+                    <li>Categories</li>
+                    <li>Archives</li>
+                </ul>
+            </aside>
+        </div>
+    </body>
+    <style>
+        .page-layout{
+            display:flex;
+            flex-direction: column;
+        }
+        main,aside{
+            width: 100%;
+            padding: 20px;
+        }
+        @media(min-width:992p){
+            .page-layout{
+                flex-direction: row;
+            }
+            main{
+                width: 70%;
+            }
+            aside{
+                width: 30;
+            }
+        }
+    </style>
+    </html>
+    
