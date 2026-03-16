@@ -1,0 +1,23 @@
+ <script>
+        constCompanyName="innovate Corp";
+        console.log("Company:",COMPANYNAME);
+        letprojectCount=5;
+        console.log("ProjectCount:",projectcount);
+        console.log("Type of projectcount:",typeof projectcount);
+        projectcount=6;
+        console.log("UpdatedProjecttCount:",projectcount);
+        consthaspermission=true;
+        console.log("HasPermission:",haspermission);
+        letfutureFeature;
+        console.log("FutureFeatureValue:",futurefeature);
+        console.log("FutureFeatureType:",typeoffutureFeature);
+        constWEEKDAYS=["mon","Tue","Wed"];
+        console.log("Weekdays:",WEEKDAYS);
+        CONSOLE.LOG("FirstDay:",WEEKDAYS[0]);
+        constwidget={
+            color:"blue",
+            price:100,
+        };
+        console.log("WidgetObject:",widget);
+        console.log('company${COMPANY-NAME}currently has${projectcount}projects.');
+        </script>
