@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Discount Calculator</h1>
+    </body>
+    <script>
+        const basePrice=150;
+        const memberLevel="Gold";
+        let finalPrice=basePrice;
+        if(memberLevel==="Gold"&&basePrice>100){
+            finalPrice=finalPrice*0.8;//20% discount
+        }else if(memberLevel==="Silver"){
+            finalPrice=finalPrice*0.9;//10% discount
+        }else{
+            // No discount(finalPrice remains basePrice)
+        }
+        console.log(finalPrice);
+    </script>
+</html>

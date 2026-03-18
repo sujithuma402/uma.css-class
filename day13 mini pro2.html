@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <h1>User Input Simulation</h1>
+    </body>
+    <script>
+        const CORRECTPASSWORD="secret";
+        let attempts=0;
+        const userinputs=["123","abc","secret"];
+        let isSuccess=false;
+        while(attempts<3){
+            let enteredPasswod=userInputs[attempts];
+            console.log("User entered:",enteredPassword);
+            if(enteredPassword===CORRECTPASSWORD){
+                isSuccess=true;
+                break;
+            }
+            if(attempts===2){
+                console.log("Account locked!");
+                break;
+            }
+            console.log("Attempt failed,trying again...");
+            attempts++;
+        }
+        if(isSuccess){
+            console.log("Success:Password correct");
+        }
+    </script>
+</html>

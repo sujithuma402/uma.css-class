@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lan="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Data Aggregator</h1>
+    </body>
+    <script>
+        const quizScores=[88,95,76,100,92];
+        let totalScores=0;
+        for(let i=0;i<quizScores.length;i++){
+            totalScores+=quizScores[i];
+        }
+        let average=totalScores/quizScores.length;
+        console.log("Total Score:",totalScores);
+        console.log("Average Score:",average);
+    </script>
+</html>
