@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>Java Practice</title>
+    </head>
+    <body>
+        <h1>Transaction Totals</h1>
+        <script>
+            const transactions=[
+                {name:"Laptop",unitsSold:1000},
+                {name:"Mobile",unitsSold:2000},
+                {name:"Mouse",unitsSold:1500}
+            ];
+            const totalUnitsSold=transactions.reduce(
+                (accumulator,transaction)=>accumulator+transaction.unitsSold,
+                0
+            );
+            console.log("Total Units Sold:",totalUnitsSold);
+        </script>
+    </body>
+</html>

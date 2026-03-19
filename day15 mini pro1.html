@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>Employee Eligibility</title>
+    </head>
+    <body>
+        <h1>Employee Eligibility</h1>
+    <script>
+        const employees=[
+            {id:"E001",salary:55000},
+            {id:"E002",salary:65000},
+            {id:"E003",salary:75000}
+        ];
+        const highPaid=employees.filter(employee=>employee.salary>60000);
+        const highPaidIDs=highPaid.map(employee=>employee.id);
+        console.log(highPaidIDs);
+    </script>
+</html>

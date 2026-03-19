@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    </head>
+    <title>Day 15 Java Practice</title>
+    <body>
+        <h1>Java Practice</h1>
+    </body>
+    <script>
+        const names=["Sujith","Uma","Dheera"];
+        console.log("initial names array.",names);
+        names.push("Mugil"); 
+        console.log("Array after adding 'mugil':",names);
+        const removedName=names.shift();
+        console.log("Removed name:",removedName);
+        console.log("Array after removing first element:",names);
+        const words=["hello","world","js"];
+        const upperWords=words.map(word=>word.toUpperCase());
+        console.log("Uppercase words:",upperWords);
+        const data=[10,5,20];
+        const incrementedData=data.map(num=>num+1);
+        console.log("Incremented numbers:",incrementedData);
+        const longWords=upperWords.filter(word=>word.length>4);
+        console.log("Words longer than 4 chars:",longwords);
+        const tempeatures=[32,10,25,40];
+        const lowTemperatures=temperatures.filter(temp=>temp<30);
+        console.log("Temperatures<30:",lowTemperatures);
+        const sumData=data.reduce((acc,num)=>acc+num,0);
+        console.log("sum of data array:",sumData);
+        const letters=["A","B","C"];
+        const concantenated=letters.reduce((acc,letter)=>acc+letter,"");
+        console.log("Concatenated letters:",concatenated);
+        const finalsum=lowTemperatures
+        .filter(temp=>temp<30)
+        .reduce((acc,temp)=>acc+temp,0);
+        console.log("Final sum of filtered temperatures:",finalSum);
+    </script>
+</html>
