@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>Day 14 practice</title>
+    </head>
+    <body>
+        <h1>Java Script Practice</h1>
+        <script>
+            function logGreeting(){
+                console.log("Hello from the function!");
+            }logGreeting();
+            function getPi(){
+                return 3.14159;
+            }
+            console.log(getPi());
+            function sayName(name){
+                console.log(`Hello,${name}`);
+            }
+            sayName('Dheera');
+            function multiply(a,b){
+                return a*b;
+            }
+            console.log(multiply(2,3));
+            const subtract=(a,b)=>{
+                return a-b;
+            };
+            console.log(subtract(5,2));
+            const divide=(a,b)=>a/b;
+            console.log(divide(6,2));
+            const double=x=>x*2;
+            console.log(double(4));
+            console.log(divide());
+            function sayName(name="Stranger"){
+                console.log(`Hello,${name}`);
+            }
+            sayName();
+            function checkStatus(){
+                return true;
+            }
+            if(checkStatus()){
+                console.log("Access Granted");
+            }
+        </script>
+    </body>
+</html>
