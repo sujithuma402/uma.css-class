@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    <title>day16 practice</title>
+</head>
+<body>
+    <h1>java script practice</h1>
+    <script>
+        const car={
+            make:"Toyoto",
+            model:"camry",
+            year:2020
+        };
+        console.log(car.make);
+        const prop="year"
+        console.log(car[prop]);
+        car.color="red";
+        console.log(car);
+        car.engine={hp:180};
+        console.log(car.engine.hp);
+        car.describe=function(){
+            return `This car is a ${this.make}${this.mpdel}.`;
+        };
+        console.log(car.describe());
+        const datapoint={x:10,y:20};
+        const jsonString=JSON.stringify(dataPoint);
+        console.log(jsonString);
+        const parasedData=JSON.parse(jsonString);
+        console.log(parsedData.x);
+    </script>
+</body>
+</html>
+
+
+
+
+
+

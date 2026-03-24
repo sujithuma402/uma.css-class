@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>Inventory item constructer</title>
+    </head>
+    <body>
+    <h1>inventory item constructer</h1>
+    <script>
+        const productItem={
+            name:"Laptop",
+            basePrice:50000,
+            taxRate:0.08,
+            calculatetaxedPrice(){
+                return this.basePrice+(this.basePrice*this.taxRate);
+            }
+        };
+        console.log(productItem.calculateTaxedPrice());
+        let productJson=JSON.stringify(productItem);
+        console.log(productJson);
+    </script>
+    </body>
+</html>

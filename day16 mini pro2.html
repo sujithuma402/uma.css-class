@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>Data Transfer Simulation</title>
+        <body>
+            <h1>Complex UserData Object</h1>
+            <script>
+                const userData={
+                    id:123,
+                    name:"Sujith",
+                    preferences:{theme:"dark"},
+                    permissions:["raed","write"]
+                };
+                let sentDataString=JSON.stringify(userData);
+                console.log(sentDataString);
+                const serverResponse=`{"ststus":"sucess","code":200}`;
+                let statusObject=JSON.parse(serverResponse);
+                if(statusObject.status==="succecc"){
+                    console.log("Data transfer verified!");
+                }
+            </script>
+        </body>
+    </head>
+</html>
