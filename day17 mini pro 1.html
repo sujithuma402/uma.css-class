@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>Dynamic Image Gallery</title>
+    </head>
+    <body>
+        <div id="gallery">
+            <img src="mob 1.jpg">
+            <img src="mob2.jpg">
+            <img src="mob 3.jpg">
+        </div>
+    <style>
+        .boder-highlight{
+            border:5px solid gold;
+        }
+        </style>
+    <script>
+        constimages=document.querySelectorAll('.gallery-item');
+        images.forEach((img,index)=>{
+            if(index===0){
+                img.classList.add('border-highligt');
+            }
+            if(index===1){
+                img.setAttribute('alt','Description of the second image');
+            }
+        });
+    </script>
+    </body>
+</html>

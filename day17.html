@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lan="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>DOM practice</title>
+    </head>
+    <body>
+        <div id="container">
+            <h2 class="title">original Header</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum earum praesentium voluptates, accusamus veniam totam dignissimos itaque, quis nisi, asperiores soluta ab ea adipisci magni maxime blanditiis reprehenderit quae sit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam alias accusantium expedita aliquam magnam fugiat commodi quisquam suscipit itaque nostrum repudiandae eius corporis, illum magni incidunt explicabo inventore, ea perferendis.</p>
+        </div>
+        <script>
+            const containerDiv=document.getElementbyId('container');
+            console.log(containerDiv);
+            constheaderH2=document.querySelector('.title');
+            console.log(headerH2);
+            headerH2.textConent="DOM practice Header";
+            headerH2.style.color="blue";
+            const newP=document.createElement('p');
+            newP.textcontent="This is a new paragraph.";
+            newP.setAttribute('data-status','created');
+            containerDiv.appendchild(newP);
+            const allparagraphs=document.querySelectorAll('p');
+            console.log(allparagraphs.length);
+            allaragraphas.forEach(p=>{
+                p.style.backgroundcolor="lightblue";
+            });
+        </script>
+    </body>
+</html>

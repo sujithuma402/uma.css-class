@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>Lit Generation</title>
+    </head>
+    <body>
+        <div id="output-area"></div>
+        <script>
+            const menuItems=["Home","About","Services","Contact"];
+            const navList=document.createElement('ul');
+            menuItems.forEach(item=>{
+                const listItem=document.createElement('li');
+                listItem.textContent=item;
+                navList.appendchild(listItem);
+            });
+            document.getElementById('output-area').appendChild(navList);
+        </script>
+    </body>
+</html>
