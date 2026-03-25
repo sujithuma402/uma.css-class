@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>Live Text Mirror</title>
+    </head>
+    <body>
+        <input id="source-input"type="text">
+        <p id="output-mirror"></p>
+        <script>
+            const inputField=document.getElementById('source-input');
+            const outputMirror=document.getElementById('output-mirror');
+            inputField.addEventListener('keydown',(e)=>{
+                if(e.key==='q'){
+                    e.preventDefault();
+                    console.log("Q is resticted.");
+                }
+            });
+            inputField.addEventListener('keyup',(e)=>{
+                outputMirror.textContent=e.target.value;
+            });
+        </script>
+    </body>
+</html>

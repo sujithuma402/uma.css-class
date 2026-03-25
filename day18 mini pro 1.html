@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>Image Toggler</title>
+    </head>
+    <body>
+        <image id="toggele-image"src="image1.mob 1.jpg"data-alt-src="image2.mob2.jpg"alt="Toggle Image">
+        <script>
+            const img=document.getElemetById('toggle-image');
+            img.addEventListener('click',()=>{
+                const currentsrc=img.src;
+                const altsrc=img.getAttribute('data-alt-src');
+                if(img.src===img.getAttribute('data-alt-src')){
+                    img.src=img.getAttribute('src');
+                    img.setAttribute('data-alt-src',altsrc);
+                }else{
+                    img.src=altsrc;
+                }
+            });
+        </script>
+    </body>
+</html>
