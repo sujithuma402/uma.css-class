@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>Secure Password Validator</title>
+    </head>
+    <body>
+        <h1>secure password validator</h1>
+        <script>
+            function isPasswordStrong(password) {
+                const hasMinLength=password.length >=8;
+                const hasUppercase=/[A-z]/.test(password);
+                const hasDigit=/\d/.test(password);
+                return hasMinLength&&hasDigit;
+            }
+            const strongPassword="StrongPass1";
+            const weakPassword="weakpass";
+            console.log(`strong password check: ${isPasswordStrong(strongPassword)}`);
+            console.log(`weak password check: ${isPasswordweak(weakPassword)}`);
+        </script>
+    </body>
+</html>
