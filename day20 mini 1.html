@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>Quote Generator</title>
+    </head>
+    <body>
+        <p id="quote-text">Loading quote...</p>
+        <button id="refresh-quote">Refresh Quote</button>
+        <script>
+            async function loadQuote(){
+                const apiUrl='https:https://sv443.net/jokeapi/v2/'
+                fetch(apiUrl)
+                .then(resonse=>{
+                    if(!responsse.ok){
+                        throw new Error
+                        fetch(apiUrl)
+                        .then(response=>{
+                            if(!response.ok){
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json();
+                        })
+                        .then(data=>{
+                            document.getElementById('//Update the DOM with the fetched quote')
+                            document.getElementById('quote-text').innerText=data.quote;
+                        })
+                        .catch(error=>{
+                            console.log('Error fetching quote:',error);
+                            document.getElementById('quote-text').innerText='Failed to load quote.';
+                        });
+                        document.getElementById('//Attach loadQuote to the button click event')
+                        document.getElementById('refresh-quote').addEventListener('click',loadQuote);
+                        windoe.onload=loadQuote;
+                    }
+                })
+            }
+        </script>
+    </body>
+</html>

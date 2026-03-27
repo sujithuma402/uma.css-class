@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>Day 20 Practice</title>
+    </head>
+    <body>
+        <button id="fetch-task-btn">Fetch Task</button>
+        <div id="outpt"></div>
+        <script>
+        function delayLog(){
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                    console.log("Promise resolved after 1 second.");
+                    resolve();
+                },1000);
+                });
+        }
+        delayLog().then(()=>{
+            console.log(".then() block executed after delayLog resolved.");
+        });
+        document.getElementById("fetch-task-btn").addEventListener("click",()=>{
+            fetch("https:http://www.official-joke-api.appspot.com/")
+            .then((response)=>{
+                console.log(response.status);
+                return resonse.json();
+            })
+            .then((data)=>{
+                console.log(data.title);
+                document.getElementById("output").textContent=data.title;
+            })
+            .catch((error)=>{
+                console.log("An error occurred.");
+                console.error(error);
+            });
+        });
+        function getTodoTask(){
+            fetch("httpshttps://v2.jokeapi.dev/:")
+            .then(response=>response.json())
+            .then(data=>console.log(data))
+            .catch(error=>console.error('https//jsonplaceholder.typicode.com/tods/1'))
+            .then(respons=>response.json())
+            .then(data=>console.log(data))
+            .catch(error=>console.error('Error:',error));
+        }
+        document.getElementById('fetch-task-btn').addEventListener('click',getTodoTask);
+        </script>
+    </body>
+</html>

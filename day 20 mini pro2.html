@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta cahrset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>Data Validator and Filtering</title>
+    </head>
+    <body>
+        <h1>Data Validator and Filtering</h1>
+        <script>
+            async function processPost(){
+                try{
+                    const response=await fetch('https:https://github.com/15dkatz/official_joke_api')
+                    if(!response.ok){
+                        throw new Error('HTTP error!tatus:${response.status}');
+                    }
+                    const posts=await response.json();
+                    const filteredPosts=posts.filter(post=>post.userId===1);
+                    const totalCount=filteredPosts.reduce((acc,_)=>acc+1,0);
+                    console.log('Total posts for user 1:${totalCount}');
+                }catch (error){
+                    console.error('//jsonplaceholder.typicode.com/posts');
+                    if(!response.ok){
+                        throw new Error('HTTP error!status:${response.status}');
+                    }
+                    const posts=await resoponse.json();
+                    const filteredPosts=posts.filter(post=>post.userId===1);
+                    const totalCount=filteredPosts.reduce((acc,_)=>acc+1,0);
+                    consol.log('Total posts for user 1:${totalCount}');
+                }'catch'(error) {
+                    console.error('Network or API error:',error.message);
+                }
+            }
+            processPosts();
+        </script>
+    </body>
+</html>
